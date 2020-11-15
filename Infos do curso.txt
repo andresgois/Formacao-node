@@ -1,0 +1,20 @@
+|-------------------------------------------------------------------------------|
+|     ============================ MÓDULOS ============================         |
+|        ***************** SESSÕES DENTRO DO CURSO *****************            |
+|                                                                               |
+|-------------------------------------------------------------------------------|
+
+============================ MÓDULOS 01 ============================         
+            ***************** BÁSICO *****************
+É um interpretador javascript, que roda fora dos navegadores
+ - muito leve
+ - muito rápido
+ - usa javascript
+ - tem um dos maiores ecossitemas do mundo
+ - está sendo utilizado fortemente no mercado
+ - muito fácil aprender
+
+------------- INSTALAÇÃO
+  * site                      = https://nodejs.org/en/
+  * testar se está instalado  = node -v
+
