@@ -1,0 +1,55 @@
+-------------- index.js
+/**
+    app.get('/:nome/:lang/', (req, res) =>{
+      // PASSANDO VALORES
+      var nome = req.params.nome;
+      var lang = req.params.lang;
+      var msg =  true;
+
+      var produtos = [
+        {nome: "Doritos", preco: 3.14},
+        {nome: "Coca-cola", preco: 5.00},
+        {nome: "Leite", preco: 1.45}
+      ];
+      // DESENHA NA TELA
+      res.render("index", {
+        nome: nome,
+        lang: lang,
+        empresa: "guia do programador",
+        inscritos: 8000,
+        msg: msg,
+        produtos: produtos
+      });
+
+    });
+*/
+
+
+--------------- index.ejs
+ <!--
+      <h1>Guia Perguntas</h1>
+      <hr>
+      <h3>Lista de perguntas</h3>
+
+
+      <p>Nome: <%=  nome %></p>
+      <p>Linguagem: <%=  lang %></p>
+      <p>Empresa: <%=  empresa %></p>
+      <p>Inscritos: <%=  inscritos %></p>
+      <p>Mensagem: <%=  msg %></p>
+
+      <% if(msg == true){ %>
+        <h3>Mensagem com erro</h3>
+      <% } else { %>
+        <h3>Mensagem OK</h3>
+      <% } %>
+      
+      <hr>
+
+
+      <% produtos.forEach( function(p){ %>
+        <%= p.nome %>
+        <%= p.preco %>
+        <br>
+      <% }); %>
+    -->
