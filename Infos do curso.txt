@@ -153,4 +153,6 @@ abaixo do css do bootstrap
 
 ============================ MÓDULOS 10 ============================         
    ************** Promises e AsyncAwait **************   
-   - 
+   - Programação Sincrona - Bloqueante
+   - Programação Assincrona - executa em paralelo
+   
