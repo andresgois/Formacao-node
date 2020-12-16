@@ -67,4 +67,32 @@ enviarEmail("Olá mundo", "andre@email.com")
       }).catch( (err) => {
         console.log("Error: " + err);
       });
-      // Aula 12
+
+
+      function pegarId(){
+        return new Promise( (res, rej) => {
+          setTimeout( () => {
+            res({id: 5});
+          },1500)
+        })
+      }
+
+      function buscaEmailNoBanco(id){
+        return new Promise( (res, rej) => {
+          setTimeout(() => {
+            res('andre@email.com');
+          },2000);
+        })
+      }
+
+      // pegarId().then( (id) => {
+      //   buscaEmailNoBanco(id).then((email) => {
+      //     enviarEmail("Email enviado com sucesso", email).then(() => {
+      //       console.log("Eamil: "+email+" - Id: "+JSON.stringify(id));
+      //     }).catch((err) => {
+      //       console.log(err);
+      //     });
+      //   })
+      // })
+
+      //Aula 13
