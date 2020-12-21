@@ -155,4 +155,35 @@ abaixo do css do bootstrap
    ************** Promises e AsyncAwait **************   
    - Programação Sincrona - Bloqueante
    - Programação Assincrona - executa em paralelo
-   
+
+
+
+============================ MÓDULOS 11 ============================         
+   ************* Orientação a objetos com Javascript *************  
+- Classes
+   -> Atributos
+      - Titulo, Genero
+   -> Métodos
+      - Carregar, Executar
+- Abstração
+
+============================ MÓDULOS 12 ============================         
+   ********* Conversor de Excel para HTML e PDF com Node ********* 
+- Tipos de arquivos
+   -> Texto - Ler e entender oq ue tem neles 
+      .json, .txt, .php 
+   -> Binário - 
+      .pdf, .avi, de jogos, .exe 
+- app.js 
+   -> inicio de exemplos
+- index.js 
+   -> mais exemplos 
+- main.js
+   -> inicio do app 
+   -> função que pegar uma função e transforma em uma Promise
+      - const util = require('util')
+      - util.promisify(funcao)
+- Biblioteca para escrever PDF
+   -> npm install html-pdf --save
+
+

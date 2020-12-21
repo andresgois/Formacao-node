@@ -85,6 +85,26 @@ enviarEmail("Olá mundo", "andre@email.com")
         })
       }
 
+      function pegarUsuarios(){
+        return new Promise((res,rej) => {
+          setTimeout(()=>{
+            res([
+              {name: "Andre", lang: "java"},
+              {name: "Beatriz", lang: "Javascript"},
+              {name: "Andreia", lang: "C#"}
+            ]);
+          
+          },2000)
+        })
+      }
+
+      async function principal(){
+        var user = await pegarUsuarios();
+        console.log(user);
+        console.log('passou');
+      }
+      //principal()
+
       // pegarId().then( (id) => {
       //   buscaEmailNoBanco(id).then((email) => {
       //     enviarEmail("Email enviado com sucesso", email).then(() => {
@@ -94,5 +114,17 @@ enviarEmail("Olá mundo", "andre@email.com")
       //     });
       //   })
       // })
+      // convertendo a função em async
+      async function secondary(){
+        var id = await pegarId();
+        var email = await buscaEmailNoBanco(id);
+        try {          
+          enviarEmail("Tudo bem", email);
+        } catch (error) {
+          console.log('Error: '+error);
+        }
+      }
 
-      //Aula 13
+      secondary();
+
+
