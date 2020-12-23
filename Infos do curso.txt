@@ -187,3 +187,43 @@ abaixo do css do bootstrap
    -> npm install html-pdf --save
 
 
+============================ MÓDULOS 13 ============================         
+   ************ Introdução a API REST com Node ************    
+- HTTP 
+- Verbos HTTP
+   - GET    : obter dados
+   - POST   : envia dados
+   - PUT    : atualiza dados completamente
+   - DELETE : deleta dado
+   - PATCH  : atualiza dados parcialmente
+- Status Code
+   - 201    : criado
+   - 200    : Ok
+   - 400    : requisição inválida
+   - 401    : não autorizado
+   - 404    : não encontrado
+   - 500    : erro no servidor
+- Web Services
+   - API que funciona através do HTTP, na web, Interface de comunicação
+   - REST
+      - Padrão
+      - REGRAS 
+         -> Cliente servidor           : só é servidor
+         -> Stateless                  : não guarda estado do Cliente
+         -> Cacheável                  : permitir cache
+         -> Saber trabalhar com camadas: não importa se houve algo entre o cliente e o servidor
+         -> Interface uniforme e direta: URL Correta, Ex: DELETE http://meusite/cliente/1
+   - RESTFULL
+      - Imprementa a arquitetura REST mais todas as outras especificações
+      - Level 0 -> está focado em uma única Rota
+      - Level 1 -> dividido em recursos, Ex: endPoint para produto, Pedido, Cliente
+      - Level 2 -> Utiliza os verbos HTTP
+      - Level 3 -> além de informar as infosações pedidas, informa todas as ações possíveis
+   -  recursos para aplicação
+      - express
+      - body-parser
+   
+
+
+
+
