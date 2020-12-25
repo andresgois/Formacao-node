@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Games</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Lista de Games</a>
+      </div>
+    </nav>
+    <div class="container">
+
+      <table class="table table-sm">
+        <!-- <caption>List of users</caption> -->
+        <thead>
+          <tr>
+            <th>#ID</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody id="corpo">
+          
+        </tbody>
+      </table>
+
+      <br>       <br>
+
+      <fieldset>
+        <legend>Controls</legend>
+        <form class="row g-3">
+          <div class="col-md-3">
+            <label for="id" class="form-label">ID:</label>
+            <input type="text" class="form-control" id="id">
+          </div>
+          <div class="col-md-7">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title">
+          </div>
+          <div class="col-3">
+            <label for="year" class="form-label">Year</label>
+            <input type="number" class="form-control" id="year">
+          </div>
+          <div class="col-6">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" class="form-control" id="price">
+          </div>
+          <div class="col-12">
+            <button type="button" id="add" class="btn btn-primary" onclick="createGame()">Adicionar</button>
+          </div>
+        </form>
+      </fieldset>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="labelModal"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="atualizar()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para atualuzar -->
+     <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="labelModal">Editar dados</h5>            
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form class="row g-3">
+                <div class="col-md-2">
+                  <label for="id" class="form-label">ID:</label>
+                  <input type="text" class="form-control" id="idEditar">
+                </div>
+                <div class="col-md-7">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="titleEditar">
+                </div>
+                <div class="col-3">
+                  <label for="year" class="form-label">Year</label>
+                  <input type="number" class="form-control" id="yearEditar">
+                </div>
+                <div class="col-3">
+                  <label for="price" class="form-label">Price:</label>
+                  <input type="number" class="form-control" id="priceEditar">
+                </div>
+                <div class="col-12">
+                  <button type="button" id="add" class="btn btn-primary" onclick="atualizarDados()">Editar</button>
+                </div>
+              </form>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="atualizar()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+      function createGame(){
+        var title = document.getElementById('title');
+        var year = document.getElementById('year');
+        var price = document.getElementById('price');
+
+        var games =
+          {
+            id: 56,
+            title: title.value,
+            year: year.value,
+            price: price.value
+          }
+          //console.log(games);
+          axios.post('http://localhost:45678/game',games);
+          resultModal("Inserido com sucesso");
+      }
+
+      function editar(id){
+        $('#editar').modal('show'); 
+        axios.get("http://localhost:45678/games/"+id).then( (response) => {
+          var game = response.data;
+          var id          = document.getElementById('idEditar').value     = game.id;
+          var titleEditar = document.getElementById('titleEditar').value  = game.title;
+          var yearEditar  = document.getElementById('yearEditar').value   = game.year;
+          var priceEditar = document.getElementById('priceEditar').value  = game.price;
+
+        }).catch(erro => {
+            console.log(erro)
+        });               
+      }
+
+      async function atualizarDados(){
+        var idEdit = document.getElementById('idEditar').value;
+        var title = document.getElementById('titleEditar');
+        var year = document.getElementById('yearEditar');
+        var price = document.getElementById('priceEditar');
+        console.log('ID: '+idEdit);
+        var games =
+          {
+            id: 56,
+            title: title.value,
+            year: year.value,
+            price: price.value
+          }
+          await axios.put('http://localhost:45678/games/'+idEdit, games); 
+         resultModal();
+      }
+
+      function deletar(id){
+        axios.delete('http://localhost:45678/game/'+id);
+        resultModal(`O Id: ${id} foi removido com sucesso!!!`);
+      }
+
+      function resultModal(texto){
+        $('#labelModal').html(texto)
+        $('#myModal').modal('show'); 
+      }
+
+      function atualizar(){
+        document.location.reload();
+      }
+
+        axios.get("http://localhost:45678/games").then( (response) => {
+          var games = response.data;
+          var list = document.getElementById('corpo');
+
+          games.forEach( game => {
+            var tr  = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+            var edit = document.createElement('img');
+            var delet = document.createElement('img');
+            var link1 = document.createElement('a');
+            var link2 = document.createElement('a');
+
+            edit.setAttribute('src','./img/edit.svg');
+            edit.setAttribute('width','30');
+            edit.setAttribute('id',game.id);
+            edit.setAttribute('onclick', 'editar('+game.id+')');
+            delet.setAttribute('src','./img/delete.jpg');
+            delet.setAttribute('width','30');
+            delet.setAttribute('id',game.id);
+            delet.setAttribute('onclick', 'deletar('+game.id+')');
+
+            link1.appendChild(edit);
+            link2.appendChild(delet);
+
+            td1.innerHTML = game.id
+            td2.innerHTML = game.title
+            td3.innerHTML = game.year
+            td4.innerHTML = game.price
+            td5.appendChild(link1);
+            td5.appendChild(link2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            tr.appendChild(td5);
+            list.appendChild(tr);
+          })
+        }).catch(erro => {
+            console.log(erro)
+        });
+    </script>
+  </body>
+</html>

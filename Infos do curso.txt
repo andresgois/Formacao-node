@@ -222,6 +222,14 @@ abaixo do css do bootstrap
    -  recursos para aplicação
       - express
       - body-parser
+- Criação de uma API 
+
+
+============================ MÓDULOS 14 ============================         
+   ************ Consumo de API REST com Axios ************  
+- Será construida um front-end para consumir a API feita no módulo anterior 
+- Comunicação do Front-End com Back-End através da LIB Axios 
+
    
 
 
