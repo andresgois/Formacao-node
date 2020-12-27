@@ -231,7 +231,14 @@ abaixo do css do bootstrap
 - Comunicação do Front-End com Back-End através da LIB Axios 
 
    
+============================ MÓDULOS 15 ============================         
+   ************ Autenticação de API Rest com JWT ************
+- API do módulo 13 está aberta, quer dizer qualquer pessoa pode fazer os 4 tipos de requisições
+- JWT 
+   -> 
+- Biblioteca do node para geração de JWT
+   -> npm install --save jsonwebtoken
 
-
-
-
+============================ MÓDULOS 16 ============================         
+   ************ Consumo de API Rest com JWT ************
+- Refatorando o front para aceitar a Autenticação
