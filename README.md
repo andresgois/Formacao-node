@@ -1,11 +1,7 @@
-|-------------------------------------------------------------------------------|
-|     ============================ MÓDULOS ============================         |
-|        ***************** SESSÕES DENTRO DO CURSO *****************            |
-|                                                                               |
-|-------------------------------------------------------------------------------|
+# SESSÕES DENTRO DO CURSO 
 
-============================ MÓDULOS 01 ============================         
-            ***************** BÁSICO *****************
+## MÓDULO 01
+#### BÁSICO
 É um interpretador javascript, que roda fora dos navegadores
  - muito leve
  - muito rápido
@@ -20,15 +16,15 @@
 
 
 
-============================ MÓDULOS 02 ============================         
-            ***************** VERBOS *****************
+## MÓDULO 02
+#### VERBOS
  - Utilizando o módulo http, que uma biblioteca nativa do node, basta
  fazer um require e atribuir a uma variável e começa a usar.
 
 
 
-============================ MÓDULOS 03 ============================         
-            ***************** EXPRESS *****************
+## MÓDULO 03
+#### EXPRESS
  - Iniciando um novo projeto
  - npm init: inicializa um novo projeto com package.json, com algumas configurações
  - instalando um projeto NPM, fica masi fácil gerenciar bibliotecas nele, --save: salva arquivos do express 
@@ -49,8 +45,8 @@
       var canal = req.query["canal"];
 
 
-============================ MÓDULOS 04 ============================         
-  ***************** Projeto Perguntas e respostas *****************
+## MÓDULO 04
+#### Projeto Perguntas e respostas
 ---- DEPENDÊNCIAS
    - index.js -> página principal
    - EXPRESS -> npm install express --save
@@ -80,8 +76,8 @@ abaixo do css do bootstrap
    - Caso de erro ao verificar a conexão no mysql2         
          -> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
 
-============================ MÓDULOS 05 ============================         
-  *********** Hospedagem de aplicações na Digital Ocean ***********
+## MÓDULO 05
+### Hospedagem de aplicações na Digital Ocean
 ----- INFORMAÇÕES
    - SITE: https://www.digitalocean.com/
    - VPS: servidor virtual privado
@@ -141,8 +137,8 @@ abaixo do css do bootstrap
 .
 .
 
-============================ MÓDULOS 09 ============================         
-   ************** Javascript ES6 - ES7 - ES8 **************
+## MÓDULO 09
+###    Javascript ES6 - ES7 - ES8
    - declarando constante
       -> const nome = 'teste';  | não pode ser alterado
    - Declaração de variáveis
@@ -151,15 +147,15 @@ abaixo do css do bootstrap
    - Bloco é tudo que está entre {}
 
 
-============================ MÓDULOS 10 ============================         
-   ************** Promises e AsyncAwait **************   
+## MÓDULO 10
+###    Promises e AsyncAwait   
    - Programação Sincrona - Bloqueante
    - Programação Assincrona - executa em paralelo
 
 
 
-============================ MÓDULOS 11 ============================         
-   ************* Orientação a objetos com Javascript *************  
+## MÓDULO 11
+###     Orientação a objetos com Javascript   
 - Classes
    -> Atributos
       - Titulo, Genero
@@ -167,8 +163,8 @@ abaixo do css do bootstrap
       - Carregar, Executar
 - Abstração
 
-============================ MÓDULOS 12 ============================         
-   ********* Conversor de Excel para HTML e PDF com Node ********* 
+## MÓDULO 12
+###    Conversor de Excel para HTML e PDF com Node 
 - Tipos de arquivos
    -> Texto - Ler e entender oq ue tem neles 
       .json, .txt, .php 
@@ -187,8 +183,8 @@ abaixo do css do bootstrap
    -> npm install html-pdf --save
 
 
-============================ MÓDULOS 13 ============================         
-   ************ Introdução a API REST com Node ************    
+## MÓDULO 13
+###     Introdução a API REST com Node     
 - HTTP 
 - Verbos HTTP
    - GET    : obter dados
@@ -225,27 +221,27 @@ abaixo do css do bootstrap
 - Criação de uma API 
 
 
-============================ MÓDULOS 14 ============================         
-   ************ Consumo de API REST com Axios ************  
+## MÓDULO 14
+###  Consumo de API REST com Axios  
 - Será construida um front-end para consumir a API feita no módulo anterior 
 - Comunicação do Front-End com Back-End através da LIB Axios 
 
    
-============================ MÓDULOS 15 ============================         
-   ************ Autenticação de API Rest com JWT ************
+## MÓDULO 15
+###    Autenticação de API Rest com JWT
 - API do módulo 13 está aberta, quer dizer qualquer pessoa pode fazer os 4 tipos de requisições
 - JWT 
    -> 
 - Biblioteca do node para geração de JWT
    -> npm install --save jsonwebtoken
 
-============================ MÓDULOS 16 ============================         
-   ************ Consumo de API Rest com JWT ************
+## MÓDULO 16
+###    Consumo de API Rest com JWT
 - Refatorando o front para aceitar a Autenticação
 
 
-============================ MÓDULOS 17 ============================         
-   ************ Documentação de API Rest ************
+## MÓDULO 17
+###    Documentação de API Rest
 - MARKDOWN  
    -> Documentação para API
    -> blog.da2k.com.br/2015/02/08/aprenda-makdown 
