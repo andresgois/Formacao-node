@@ -242,3 +242,11 @@ abaixo do css do bootstrap
 ============================ MÓDULOS 16 ============================         
    ************ Consumo de API Rest com JWT ************
 - Refatorando o front para aceitar a Autenticação
+
+
+============================ MÓDULOS 17 ============================         
+   ************ Documentação de API Rest ************
+- MARKDOWN  
+   -> Documentação para API
+   -> blog.da2k.com.br/2015/02/08/aprenda-makdown 
+   
