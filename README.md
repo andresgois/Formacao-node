@@ -251,3 +251,24 @@ abaixo do css do bootstrap
    - Documentação para API
    - blog.da2k.com.br/2015/02/08/aprenda-makdown 
    
+## MÓDULO 18
+###    Chegando ao RESTful com HATEOAS
+  - Último passo para seguir, para transformar sua API Resr em RestFull
+  - Trás a requisições com suas informações e mais ações que podem ser feitas sobre elas.
+  ##### Exemplo
+  ```
+  {
+    "FirstName":"André",
+    "LastName":"Gois",
+    "Links": [
+      {
+        "Href": "http://localhost:5000/users/12336",
+        "Rel": "get_users",
+        "Method": "GET"
+      }
+    ]
+  }
+  ```
+#### Vantagens
+  - Ver todas as ações possíveis para a API
+  - Desacopla o Back do Front
