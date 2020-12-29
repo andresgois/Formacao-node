@@ -10,9 +10,9 @@
  - está sendo utilizado fortemente no mercado
  - muito fácil aprender
 
-------------- INSTALAÇÃO
-  * site                      = https://nodejs.org/en/
-  * testar se está instalado  = node -v
+##### INSTALAÇÃO
+  * site:                       https://nodejs.org/en/
+  * testar se está instalado:   node -v
 
 
 
@@ -34,8 +34,10 @@
     npm install nodemon -g
  - iniciando o nodemon
     nodemon index.js
- - REQ => DADOS ENVIADOS PELO USUÁRIO
- - RES => RESPOSTA QUE VAI SER ENVIADA PARA O USUÁRIO
+ - REQ 
+    - DADOS ENVIADOS PELO USUÁRIO
+ - RES 
+    - RESPOSTA QUE VAI SER ENVIADA PARA O USUÁRIO
  - Rotas com parametros
    * parametros obrigatórios
       app.get('/ola/:nome', (req, res) ...
@@ -47,42 +49,48 @@
 
 ## MÓDULO 04
 #### Projeto Perguntas e respostas
----- DEPENDÊNCIAS
-   - index.js -> página principal
-   - EXPRESS -> npm install express --save
-   - EJS -> npm install ejs --save
-   - body-parser -> npm install body-parser --save
-   - Sequelize -> npm install --save Sequelize
-   - mysql   -> npm install --save mysql2
+##### DEPENDÊNCIAS
+   - index.js  
+        - página principal
+   - EXPRESS  
+        - npm install express --save
+   - EJS  
+        - npm install ejs --save
+   - body-parser  
+        - npm install body-parser --save
+   - Sequelize  
+        - npm install --save Sequelize
+   - mysql    
+        - npm install --save mysql2
 
----- CONFIGURAÇÕES 
+##### CONFIGURAÇÕES 
    - npm init   
    - Definindo motor EJS
-         -> app.set('view engine','ejs');
+         - app.set('view engine','ejs');
    - utilizado para pegar variavéis
-         -> <%=  %>
+         - <%=  %>
    - utilizado para expressões
-         -> <%  %>
+         - <%  %>
    - definindo arquivos estáticos
-         -> app.use(express.static('public'));
+         - app.use(express.static('public'));
    - para adicionar arquivos css externos, você deve carregar o link
 abaixo do css do bootstrap   
    - para incluir partials
-         -> <%- include('./partials/header.ejs'); %>
+         - <%- include('./partials/header.ejs'); %>
    - biblioteca para pegar pelo método post
-         -> body-parser
+         - body-parser
          ele traduz os dados enviados pelo usuário, para uma maneira
          que seja reaproveitavél pela aplicação
    - Caso de erro ao verificar a conexão no mysql2         
-         -> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
+         - ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
 
 ## MÓDULO 05
 ### Hospedagem de aplicações na Digital Ocean
------ INFORMAÇÕES
+##### INFORMAÇÕES
    - SITE: https://www.digitalocean.com/
    - VPS: servidor virtual privado
------ FAZENDO DEPLOY
-   ----- Deploy simples
+##### FAZENDO DEPLOY
+   ###### Deploy simples
    - cria a conta
    - Get Started with a Droplet  
    - Qual S.O 
@@ -99,7 +107,7 @@ abaixo do css do bootstrap
    - no putty save a chave public e a privada
    - Nome do servidor
    - Create Droplet 
-   ----- acessando server
+   ###### acessando server
    - abre o putty 
    - Connection -> SSH -> Auth 
    - pega a arquivo privado para abrir a chave
@@ -107,10 +115,10 @@ abaixo do css do bootstrap
    - no puTTTy cola em Session Host, Typo SSH e save a Session 
    - open
    - user = root
-   ---- instalações
+   ###### instalações
    - baixar e nodejs, atualiza a lista de pacote do ubuntu, instala o mysql-server 
    - depois digita: mysql_secure_installation
-   ---- subindo arquivos
+   ###### subindo arquivos
    - Instalar e onfigurar o fillezila na sua máquina
    - Protocolo: SFTP
    - HOST: IP do servidor
@@ -119,7 +127,7 @@ abaixo do css do bootstrap
    - cria uma pasta 
    - coloca todos os arquivos da pasta menos a node_modules
    - entra na pasta pelo puTTTy e instala: npm install 
-   ----- configurar o banco
+   ###### configurar o banco
    - entra no banco e cria um database
    - entra na pasta que tem o banco de dados e abre com o nano
    - edite as informações necessárias
@@ -127,23 +135,21 @@ abaixo do css do bootstrap
    - caso de erro digite esse comando
       -> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'senha do mysql'
    - porta padrão da web e a 80, então alterar no index.js
-   ---- colocar o node para rodar em background
+   ###### colocar o node para rodar em background
    - utilize o pm2: sudo npm install -g pm2 
    - entra no diretório do arquivo principal, no caso, index,js
    - digita: pm2 start index.js
 
 
-.
-.
-.
+
 
 ## MÓDULO 09
 ###    Javascript ES6 - ES7 - ES8
    - declarando constante
-      -> const nome = 'teste';  | não pode ser alterado
+      - const nome = 'teste';  | não pode ser alterado
    - Declaração de variáveis
-      -> var | Funciona em: Global, local  e de bloco
-      -> let | Funciona em: Global, local
+      - var | Funciona em: Global, local  e de bloco
+      - let | Funciona em: Global, local
    - Bloco é tudo que está entre {}
 
 
@@ -157,30 +163,30 @@ abaixo do css do bootstrap
 ## MÓDULO 11
 ###     Orientação a objetos com Javascript   
 - Classes
-   -> Atributos
+   - Atributos
       - Titulo, Genero
-   -> Métodos
+   - Métodos
       - Carregar, Executar
 - Abstração
 
 ## MÓDULO 12
 ###    Conversor de Excel para HTML e PDF com Node 
 - Tipos de arquivos
-   -> Texto - Ler e entender oq ue tem neles 
+   - Texto - Ler e entender oq ue tem neles 
       .json, .txt, .php 
-   -> Binário - 
+   - Binário - 
       .pdf, .avi, de jogos, .exe 
 - app.js 
-   -> inicio de exemplos
+   - inicio de exemplos
 - index.js 
-   -> mais exemplos 
+   - mais exemplos 
 - main.js
-   -> inicio do app 
-   -> função que pegar uma função e transforma em uma Promise
+   - inicio do app 
+   - função que pegar uma função e transforma em uma Promise
       - const util = require('util')
       - util.promisify(funcao)
 - Biblioteca para escrever PDF
-   -> npm install html-pdf --save
+   - npm install html-pdf --save
 
 
 ## MÓDULO 13
@@ -204,17 +210,17 @@ abaixo do css do bootstrap
    - REST
       - Padrão
       - REGRAS 
-         -> Cliente servidor           : só é servidor
-         -> Stateless                  : não guarda estado do Cliente
-         -> Cacheável                  : permitir cache
-         -> Saber trabalhar com camadas: não importa se houve algo entre o cliente e o servidor
-         -> Interface uniforme e direta: URL Correta, Ex: DELETE http://meusite/cliente/1
+         - Cliente servidor           : só é servidor
+         - Stateless                  : não guarda estado do Cliente
+         - Cacheável                  : permitir cache
+         - Saber trabalhar com camadas: não importa se houve algo entre o cliente e o servidor
+         - Interface uniforme e direta: URL Correta, Ex: DELETE http://meusite/cliente/1
    - RESTFULL
       - Imprementa a arquitetura REST mais todas as outras especificações
-      - Level 0 -> está focado em uma única Rota
-      - Level 1 -> dividido em recursos, Ex: endPoint para produto, Pedido, Cliente
-      - Level 2 -> Utiliza os verbos HTTP
-      - Level 3 -> além de informar as infosações pedidas, informa todas as ações possíveis
+      - Level 0 - está focado em uma única Rota
+      - Level 1 - dividido em recursos, Ex: endPoint para produto, Pedido, Cliente
+      - Level 2 - Utiliza os verbos HTTP
+      - Level 3 - além de informar as infosações pedidas, informa todas as ações possíveis
    -  recursos para aplicação
       - express
       - body-parser
@@ -230,10 +236,9 @@ abaixo do css do bootstrap
 ## MÓDULO 15
 ###    Autenticação de API Rest com JWT
 - API do módulo 13 está aberta, quer dizer qualquer pessoa pode fazer os 4 tipos de requisições
-- JWT 
-   -> 
+- JWT  
 - Biblioteca do node para geração de JWT
-   -> npm install --save jsonwebtoken
+   - npm install --save jsonwebtoken
 
 ## MÓDULO 16
 ###    Consumo de API Rest com JWT
@@ -243,6 +248,6 @@ abaixo do css do bootstrap
 ## MÓDULO 17
 ###    Documentação de API Rest
 - MARKDOWN  
-   -> Documentação para API
-   -> blog.da2k.com.br/2015/02/08/aprenda-makdown 
+   - Documentação para API
+   - blog.da2k.com.br/2015/02/08/aprenda-makdown 
    
