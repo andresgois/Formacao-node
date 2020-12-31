@@ -109,7 +109,9 @@ abaixo do css do bootstrap
    - Create Droplet 
    ###### acessando server
    - abre o putty 
-   - Connection -> SSH -> Auth 
+   - Connection 
+      - SSH
+      - Auth 
    - pega a arquivo privado para abrir a chave
    - em Droplet copia o IP do servidor
    - no puTTTy cola em Session Host, Typo SSH e save a Session 
@@ -133,7 +135,7 @@ abaixo do css do bootstrap
    - edite as informações necessárias
    - executa o: node index.js
    - caso de erro digite esse comando
-      -> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'senha do mysql'
+      - ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'senha do mysql'
    - porta padrão da web e a 80, então alterar no index.js
    ###### colocar o node para rodar em background
    - utilize o pm2: sudo npm install -g pm2 
@@ -269,6 +271,70 @@ abaixo do css do bootstrap
     ]
   }
   ```
+
+  ##### Exemplo prático
+  ```
+  {
+    "games": [
+        {
+            "id": 23,
+            "title": "Call of duty MW",
+            "year": 2019,
+            "price": 60
+        },
+        {
+            "id": 65,
+            "title": "Sea of thieves",
+            "year": 2018,
+            "price": 40
+        },
+        {
+            "id": 2,
+            "title": "Minecraft",
+            "year": 2012,
+            "price": 20
+        }
+    ],
+    "_links": [
+        {
+            "href": "http://localhost:45678/game/0",
+            "method": "DELETE",
+            "rel": "delete_game"
+        },
+        {
+            "href": "http://localhost:45678/game/0",
+            "method": "GET",
+            "rel": "get_game"
+        },
+        {
+            "href": "http://localhost:45678/game/0",
+            "method": "PUT",
+            "rel": "atualiza_game"
+        }
+    ]
+   }  
+  ```
 #### Vantagens
   - Ver todas as ações possíveis para a API
   - Desacopla o Back do Front
+
+
+## MÓDULO 19
+### Validação de formulários
+#### Instalações
+- npm install express --save
+- npm install body-parser --save
+- npm install express-session --save
+- npm install ejs --save
+- npm install express-flash --save
+- npm install cookie-parser --save
+- Flash Session
+   - Sessões que duram apenas uma requisição, usado uma vez e depois destruida
+- https://www.npmjs.com/package/validator
+
+
+## MÓDULO 20
+### Knex.JS - SQL Avançado
+- Página Oficial
+   - http://knexjs.org/
+- 
