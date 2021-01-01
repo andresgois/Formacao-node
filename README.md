@@ -337,4 +337,25 @@ abaixo do css do bootstrap
 ### Knex.JS - SQL Avançado
 - Página Oficial
    - http://knexjs.org/
-- 
+- Biblioteca para manipulação de banco de dados SQL
+- Formas de trabalhar manipulação de dados no JS
+   - RAW 
+      - SELECT * FROM clientes
+      - Exemplo de lib: mysql2
+   - ORM
+      - Models: Clientes.create({name: 'Joaquim'});
+      - Exemplo de lib: Sequelize
+   - Query Builders
+      - banco.select().where({id: 7}).orWhere({title: 'JS'}).orderBy('title').table('post')
+      - Exemplo de lib: knex
+      - Necessário cria o banco e as tabelas na mão
+      - Necessário instalar lib pra o banco a ser usado
+#### Instalações
+- npm install knex --save
+- npm install mysql2 --save
+
+
+## MÓDULO 21
+### Vue.js - Introdução
+
+
