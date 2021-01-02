@@ -357,5 +357,54 @@ abaixo do css do bootstrap
 
 ## MÓDULO 21
 ### Vue.js - Introdução
+- Página Oficial
+   - https://vuejs.org/
+- Vue 
+   - Framework javascript para front-end
+   - Framework web reativo
+   - Foco em aplicações em SPA
+
+#### Instalações
+- npm install -g @vue/cli
+- vue -v
+- Criando projeto
+   - vue create guiaclientes
+   - cd /guiaclientes
+   - npm run serve
+#### Estrutura projeto VUE
+- > node_modules
+   * Onde estão instaladas todas as bibliotecas
+- > public
+   - Icone do site.
+   - Página inicial, onde todas as outras página serão adicionadas ou chamadas por ela, Lembra do SPA.
+- > src
+   - > Assets
+      - onde ficarão as imagens
+   - > Components
+      - componentes do sistema e toda a regra de negócio
+   - > App.js
+      - Componente Raiz, Principal componente da aplicação
+   - > main.js
+      - Instância a aplicação
+      - Monta a aplicação em determinada TAG
+      - Diz as configurações do projeto
+      - Mostra o componente raiz
+      - Renderiza a aplicação no determinado ID
+- > .gitignore
+   * Arquivos que serão ignorados pelo git
+- > babel.config.js
+   * Conversor javascript moderno para versão que todos os navegadores suportem
+- > package.json
+   * Dependências do node para a aplicação
+- > package-lock.json
+   * Dependências do node para a aplicação
+- > README.md
+   * Documentação da aplicação
+
+#### Componentes
+- Dividido em 3 partes
+- Do HTML
+- Do CSS
+- Do JS
 
 
