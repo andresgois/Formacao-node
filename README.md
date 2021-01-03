@@ -142,7 +142,21 @@ abaixo do css do bootstrap
    - entra no diretório do arquivo principal, no caso, index,js
    - digita: pm2 start index.js
 
+## MÓDULO 07
+#### [Projeto#02] Criando um blog com painel administrativo - CRUD completo
+##### Instalações
+- npm install --save express
+- npm install --save sequelize
+- npm install --save mysql2
+- npm install --save body-parser
+- npm install --save ejs
 
+
+##### Relacionamentos
+- Tipos de relacionamentos
+   - 1 PARA 1 => Atividade -> Pertence -> Aula
+   - 1 PARA N => Vendedor  -> Atende   -> Clientes
+   - M PARA N => Produto   -> Compra   -> Nota
 
 
 ## MÓDULO 09
@@ -415,5 +429,6 @@ abaixo do css do bootstrap
    * v-model
    * v-if
    * v-else
+   // Aula 264
 
 
