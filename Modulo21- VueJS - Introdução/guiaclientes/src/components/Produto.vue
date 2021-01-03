@@ -10,13 +10,28 @@
       <input type="text" id="preco" placeholder="Preco">
       <br>
       <button>Enviar</button>
+      <hr>
+      Produto: {{nome}} - Preço: R$ {{preco}}
+      <br>
+      Produto:
+      <p>{{produto.nome}} -  Preço: R$ 
+        <strong v-if="mostraPreco === true">{{produto.preco}}</strong> 
+        <strong v-else>Abaixo da média</strong>
+      </p>
+
+
     </form>
   </div>
 </template>
 
 <script>
 export default {
-  
+  props:{
+    nome: String,
+    preco: Number,
+    produto: Object,
+    mostraPreco: Boolean
+  }
 }
 </script>
 

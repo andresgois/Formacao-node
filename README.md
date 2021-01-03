@@ -406,5 +406,14 @@ abaixo do css do bootstrap
 - Do HTML
 - Do CSS
 - Do JS
+- Data Binding de visualização
+   * :value="nome"
+- Two way Data Binding
+   * Só em formulários
+   * v-model="nome"
+- Diretivas
+   * v-model
+   * v-if
+   * v-else
 
 

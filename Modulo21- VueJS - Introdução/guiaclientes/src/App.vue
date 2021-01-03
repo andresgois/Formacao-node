@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Cliente />
-    <Produto />
+    <Produto nome="Rapadura" preco="4.50" />
+    <Produto :produto="prod1" :mostraPreco="prod1.preco > 2.0" />
   </div>
 </template>
 
@@ -12,6 +13,14 @@ import Produto from './components/Produto.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      prod1:{
+        nome: 'Sabão',
+        preco: 5
+      }
+    }
+  },
   components: {
     Cliente,
     Produto

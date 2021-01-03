@@ -1,15 +1,29 @@
 <template>
   <div>
-    <h2>Componente Cliente</h2>
+    <h2>Nome Cliente: {{nome}}</h2>
     <hr>
-    <p>Cliente Fulano</p>
+    <p>Descrção: {{descricao}}</p>
+    <hr>
+
+    <input type="text" :value="nome">
+    <br>
+    <input type="text" :value="descricao">
+    <hr>
+    <input type="text" v-model="nome">
+    <br>
+    <input type="text" v-model="descricao">
   </div>
 </template>
 
 <!-- SCRIPT -->
 <script>
 export default {
-  
+  data(){
+    return{
+      nome: "Andre",
+      descricao: "Lorem ipsum dolor"
+    }
+  }
 }
 </script>
 
