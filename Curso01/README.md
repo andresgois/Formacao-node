@@ -5,6 +5,7 @@
 - npm install --save body-parser
 - npm install --save mongoose
 - npm install --save bcrypt
+- npm install --save jsonwebtoken
 
 ##### Exmplo com queries
 ```

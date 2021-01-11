@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+const config = require('./Config/config');
+/**
+ * 'set NODE_ENV=dev
+ */
 
 // STRING DE CONEXÃO => mongodb+srv://andregois:123456Curso@cursoapi.je5zm.mongodb.net/<dbname>?retryWrites=true&w=majority
-const url = 'mongodb+srv://andregois:123456Curso@cursoapi.je5zm.mongodb.net/cursoapi?retryWrites=true&w=majority';
+const url = config.bd_string;
 // const options = {
 //   reconnectTries: Number.MAX_VALUE,
 //   reconnectInterval: 500,
