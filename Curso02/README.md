@@ -47,13 +47,13 @@
     "email": "andre@email.com"
   }
   ```                                       
-                                            = Body (request body)
+  ##### Body (request body)
   ```
   {
     "token": "ndsngfçakiewripksafpcdxz"
   }
   ```                                       
-                                            = Headers
+  ##### Headers
 
 ## CONFIGURAÇÃO DO EDITOR DE CÓDIGO
 - Plugins
@@ -106,7 +106,7 @@
         "dev": "nodemon src/server.js"
       }
     ```
-    - cria um nodemon.json na rais, com:
+    - cria um nodemon.json na raiz, com:
     ````
     {
       "execMap": {
