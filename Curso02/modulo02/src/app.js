@@ -1,36 +1,34 @@
-import express from 'express';
-import routes from './routes';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import path from 'path';
-import config from '../config/config';
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import path from "path";
+import routes from "./routes";
+import config from "../config/config";
 
-
-class App{
-
-  constructor(){
+class App {
+  constructor() {
     this.server = express();
 
-      mongoose.connect(config.bd_string, {
+    mongoose.connect(config.bd_string, {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
     });
 
     this.middlewares();
     this.routes();
   }
 
-  middlewares(){
+  middlewares() {
     this.server.use(cors());
     this.server.use(
-      '/files',
-      express.static(path.resolve(__dirname, '..','..','uploads'))
+      "/files",
+      express.static(path.resolve(__dirname, "..", "..", "uploads"))
     );
 
     this.server.use(express.json());
   }
 
-  routes(){
+  routes() {
     this.server.use(routes);
   }
 }

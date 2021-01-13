@@ -1,28 +1,34 @@
-
-
-/**Métodos dentro do controller
- * index: Listagem de sessões 
- * store: Cria uma sessão 
+/** Métodos dentro do controller
+ * index: Listagem de sessões
+ * store: Cria uma sessão
  * show: Quando queremos listar uma única sessão
  * update: quando queremos atualizar uma sessão
- * destroy: quando queremos delete 
+ * destroy: quando queremos delete
  */
-import User from '../models/User';
+import * as Yup from "yup";
+import User from "../models/User";
 
- class SessionController{
-   
-    async store(req, res){
-      const { email } =  req.body;
-      // verifica se o email já existe
-      let user = await User.findOne({email: email});
+class SessionController {
+  async store(req, res) {
+    const schema = Yup.object().shape({
+      email: Yup.string().email().required(),
+    });
 
-      if(!user){
-        user = await User.create({email});
-      }
+    const { email } = req.body;
 
-      res.json(user);
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ error: "Falha na validação." });
     }
 
- }
+    // verifica se o email já existe
+    let user = await User.findOne({ email });
 
- export default new SessionController();
+    if (!user) {
+      user = await User.create({ email });
+    }
+
+    res.json(user);
+  }
+}
+
+export default new SessionController();
